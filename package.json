@@ -1,0 +1,29 @@
+{
+  "name": "medusa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-cli": "^1.2.2",
+    "gulp-filelist": "^1.0.0",
+    "gulp-layout": "0.0.4",
+    "gulp-markdown": "^1.2.0",
+    "gulp-sourcemaps": "^2.3.1",
+    "minimist": "^1.2.0",
+    "pug": "^2.0.0-beta6",
+    "rimraf": "^2.5.4",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-zip": "^3.2.0",
+    "run-sequence": "^1.2.2"
+  }
+}
