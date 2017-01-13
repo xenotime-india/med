@@ -12,7 +12,6 @@ const concat = require('gulp-concat');
 const layout = require('gulp-layout')
 const browserSync = require('browser-sync').create();
 const rimraf = require('rimraf')
-const zip = require('gulp-zip')
 const runseq = require('run-sequence')
 
 
@@ -29,11 +28,6 @@ gulp.task('public:clean',function(done){
   rimraf('../../public/*',done)
 })
 
-gulp.task('docs:package',['docs:build'],function(done){
-  return gulp.src('public/*')
-    .pipe(zip('public-static-pkg.zip'))
-    .pipe(gulp.dest('.'));
-})
 gulp.task('cleanup',function(done){
   rimraf('./.tmpbuild/*',done)
 })

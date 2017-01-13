@@ -20,11 +20,8 @@
     "minimist": "^1.2.0",
     "pug": "^2.0.0-beta6",
     "rimraf": "^2.5.4",
-    "through2": "^2.0.3"
-  },
-  "devDependencies": {
+    "through2": "^2.0.3",
     "gulp-concat": "^2.6.1",
-    "gulp-zip": "^3.2.0",
     "run-sequence": "^1.2.2"
   }
 }
