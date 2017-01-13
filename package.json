@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.3.2",
     "gulp-cli": "^1.2.2",
+    "gulp-concat": "^2.6.1",
     "gulp-filelist": "^1.0.0",
     "gulp-layout": "0.0.4",
     "gulp-markdown": "^1.2.0",
@@ -20,8 +22,7 @@
     "minimist": "^1.2.0",
     "pug": "^2.0.0-beta6",
     "rimraf": "^2.5.4",
-    "through2": "^2.0.3",
-    "gulp-concat": "^2.6.1",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "through2": "^2.0.3"
   }
 }
