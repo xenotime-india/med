@@ -16,7 +16,7 @@ const zip = require('gulp-zip')
 const runseq = require('run-sequence')
 
 
-gulp.task('docs:all',function(done){
+gulp.task('default',function(done){
   runseq('docs:fetch','docs:build','docs:package',done)
 })
 
