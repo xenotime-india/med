@@ -17,7 +17,7 @@ const runseq = require('run-sequence')
 
 
 gulp.task('default',function(done){
-  runseq('docs:fetch','docs:build','docs:package',done)
+  runseq('docs:fetch','docs:build',done)
 })
 
 gulp.task('docs:fetch',function(done) {
@@ -35,7 +35,7 @@ gulp.task('docs:package',['docs:build'],function(done){
     .pipe(gulp.dest('.'));
 })
 gulp.task('cleanup',function(done){
-  rimraf('../../.tmpbuild/*',done)
+  rimraf('./.tmpbuild/*',done)
 })
 
 gulp.task('docs:build', function(done){
@@ -49,10 +49,10 @@ gulp.task('docs:build', function(done){
 })
 
 gulp.task('docs:markdown', function () {
-  return gulp.src('../../lusa-psd-documentation/**/*.md')
+  return gulp.src('./lusa-psd-documentation/**/*.md')
     .pipe(markdown())
     .pipe(layout({
-      layout: '../../templates/layout.pug'
+      layout: './templates/layout.pug'
     }))
     .pipe(gulp.dest('../../public'));
 });
