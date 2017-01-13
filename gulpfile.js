@@ -26,7 +26,7 @@ gulp.task('docs:fetch',function(done) {
 })
 
 gulp.task('public:clean',function(done){
-  rimraf('./public/*',done)
+  rimraf('../../public/*',done)
 })
 
 gulp.task('docs:package',['docs:build'],function(done){
@@ -35,7 +35,7 @@ gulp.task('docs:package',['docs:build'],function(done){
     .pipe(gulp.dest('.'));
 })
 gulp.task('cleanup',function(done){
-  rimraf('./.tmpbuild/*',done)
+  rimraf('../../.tmpbuild/*',done)
 })
 
 gulp.task('docs:build', function(done){
@@ -49,18 +49,18 @@ gulp.task('docs:build', function(done){
 })
 
 gulp.task('docs:markdown', function () {
-  return gulp.src('./lusa-psd-documentation/**/*.md')
+  return gulp.src('../../lusa-psd-documentation/**/*.md')
     .pipe(markdown())
     .pipe(layout({
-      layout: './templates/layout.pug'
+      layout: '../../templates/layout.pug'
     }))
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('../../public'));
 });
 
 gulp.task('dev:server',['docs:build'],function(){
   browserSync.init({
     server: {
-      baseDir: "./public"
+      baseDir: "../../public"
     }
   });
 
@@ -87,7 +87,7 @@ gulp.task('assets:css',function(){
   return gulp.src(['./vendor/markdown.css','./assets/main.css'])
     .pipe(concat('all.css'))
     .pipe(minify())
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('../../public'));
 })
 
 gulp.task('assets:css:sourcemaps',function(){
@@ -96,5 +96,5 @@ gulp.task('assets:css:sourcemaps',function(){
     .pipe(concat('all.css'))
     .pipe(minify())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('../../public'));
 })
